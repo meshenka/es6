@@ -1,0 +1,57 @@
+// ---------- = Liens d'évitements ----------
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  span, ul { display: inline-block; }
+
+  ul { padding-left: 2px; margin: 2px 0; }
+
+  li {
+    display: inline-block;
+
+    a {
+      padding: 0 2px 0 7px;
+      position: relative;
+
+      &:before {
+        content: "|";
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 1px;
+        height: 11px;
+      }
+    }
+
+    &:first-child a {
+      padding-left: 0;
+
+      &:before { content: ""; }
+    }
+  }
+}
+.hidden-link { position: absolute; left: -9999px; }
+
+/*
+-----------------------------------------------------------------------
+= WebKit Safari et Chrome
+-----------------------------------------------------------------------
+*/
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .skip-link li a:before { top: 0; }
+}
+
+/*
+-----------------------------------------------------------------------
+= Versions responsive
+-----------------------------------------------------------------------
+*/
+
+// affichage des liens d'évitements par défaut sur les versions tactiles
+@media (max-width: 990px) {
+  .skip-link.hidden-link { left: auto; position: static; }
+}

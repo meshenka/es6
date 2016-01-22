@@ -10,6 +10,6 @@ var webpack = require('webpack-stream');
 gulp.task('default', function() {
     return gulp.src('src/script.js')
         .pipe(webpack( require('./webpack.config.js') ))
-        .pipe(gulp.dest('build/'))
+        .pipe(gulp.dest('build/bundle.js'))
     ;
 });

@@ -1,9 +1,11 @@
-/* export Child */
+/* export : Child */
 
-import { Parent } from './parent';
+import Parent from './parent';
 
-export default class Child extends Parent {
+class Child extends Parent {
   doSomething () {
-    return this.something;
+    return this.something();
   }
 }
+
+export default Child;

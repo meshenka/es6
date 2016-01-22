@@ -1,6 +1,7 @@
-/* global console */
+/* global document */
 
-import {Child} from './modules/child';
+import Child from './modules/child';
 
 let child = new Child(10,30);
-console.log(child.doSomething);
+
+document.body.innerText = child.doSomething();

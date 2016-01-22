@@ -8,4 +8,5 @@ class Child extends Parent {
   }
 }
 
+
 export default Child;

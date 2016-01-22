@@ -1,7 +1,8 @@
 /* global document */
+/* global console */
 
-import Child from './modules/child';
+import Chld from './modules/child';
 
-let child = new Child(10,30);
+let child = new Chld(10,30);
 
-document.body.innerText = child.doSomething();
+console.log(child.doSomething());

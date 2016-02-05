@@ -4,29 +4,35 @@
   "description": "a demo glup with ES6 support",
   "main": "gulpfile.babel.js",
   "devDependencies": {
-    "babel-cli": "^6.4.5",
     "babel-core": "^6.4.5",
     "babel-eslint": "^4.1.8",
     "babel-loader": "^6.2.2",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-stage-2": "^6.3.13",
     "eslint": "^1.10.3",
-    "gulp-babel": "^6.1.2",
-    "webpack": "^1.12.13",
+    "gulp": "^3.9.0",
+    "gulp-uglify": "^1.5.1",
     "webpack-stream": "^3.1.0"
   },
   "scripts": {
-    "build": "mkdir -p build && webpack",
-    "build-gulp": "mkdir -p build && gulp",
+    "build": "mkdir -p build && gulp",
     "lint": "eslint src",
     "prepublish": "npm run build"
   },
+  "tags": [
+    "es6",
+    "build",
+    "front-end"
+  ],
   "keywords": [
     "test",
     "es6",
     "stage-2",
     "javacript",
-    "ecmascript"
+    "ecmascript",
+    "eslint",
+    "webpack",
+    "gulp"
   ],
   "author": "Sylvain Gogel <sgogel@ecedi.fr>",
   "license": "MIT"

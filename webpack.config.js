@@ -1,11 +1,8 @@
 'use strict';
-/* global module */
 /**
- * @see http://www.2ality.com/2015/04/webpack-es6.html
- * @type {[type]}
+ * ES6 style configuration
  */
-module.exports = {
-    // entry: './src/script.js',
+const config = {
     output: {
         // path: './build',
         filename: 'all.js'
@@ -23,3 +20,5 @@ module.exports = {
       ]
     }
 };
+
+export default config;

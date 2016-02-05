@@ -6,10 +6,15 @@
 /* global require */
 var gulp = require('gulp');
 var webpack = require('webpack-stream');
+//var babel = require('gulp-babel');
+var webpackConfig = require('./webpack.config.js');
 
 gulp.task('default', function() {
     return gulp.src('src/script.js')
-        .pipe(webpack( require('./webpack.config.js') ))
-        .pipe(gulp.dest('build/bundle.js'))
+        // .pipe(babel({
+        //     presets: ['es2015', 'stage-2']
+        // }))
+        .pipe(webpack( webpackConfig ))
+        .pipe(gulp.dest('build/'))
     ;
 });

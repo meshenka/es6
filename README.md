@@ -9,11 +9,6 @@ npm install -g eslint
 
 #as standard user
 npm install
-
-#build
-npm run build
-#
-
 ```
 
 ## Run build process
@@ -34,6 +29,10 @@ We can also lint js
 npm run lint
 ```
 
+
+## TODO
+
+  * configure webpack-dev-server
 
 ## See
 

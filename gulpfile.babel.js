@@ -10,7 +10,7 @@ import webpack from 'webpack-stream';
 import uglify from 'gulp-uglify';
 import webpackConfig from './webpack.config';
 
-gulp.task('default', function() {
+gulp.task('default', () => {
     return gulp.src('src/script.js')
         .pipe(webpack( webpackConfig ))
         .pipe(uglify())

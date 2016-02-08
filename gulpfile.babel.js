@@ -10,10 +10,12 @@ import webpack from 'webpack-stream';
 import uglify from 'gulp-uglify';
 import webpackConfig from './webpack.config';
 
-gulp.task('default', () => {
-    return gulp.src('src/script.js')
+gulp.task('default',['counter'], () => {
+    return gulp.src([
+        'src/script.js',
+        'src/counter.jsx'])
         .pipe(webpack( webpackConfig ))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest('build/'))
     ;
 
@@ -21,10 +23,5 @@ gulp.task('default', () => {
 
 gulp.task('counter', () => {
 
-    return gulp.src('src/counter.jsx')
-        .pipe(webpack( webpackConfig ))
-//        .pipe(uglify())
-        .pipe(gulp.dest('build/'))
-    ;
 
 });

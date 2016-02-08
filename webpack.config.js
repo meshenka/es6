@@ -14,7 +14,7 @@ const config = {
           exclude: /(node_modules|bower_components)/,
           loader: 'babel-loader', // 'babel-loader' is also a legal name to reference
           query: {
-            presets: ['stage-2', 'es2015', 'jsx-loader']
+            presets: ['stage-2', 'es2015']
           }
         }
       ]

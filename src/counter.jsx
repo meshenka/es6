@@ -84,14 +84,15 @@ const CounterContainer = connect(
  * Let's create a store.
  */
 //const { createStore } = Redux;
-import { createStrore } from 'redux';
+import { createStore } from 'redux';
 
 const store = createStore(counter);
 
 
-import { ReactDOM } from 'react-dom;
+import React from 'react';
+import ReactDOM from 'react-dom'
 
-/*
+/**
  * Finally, render the container,
  * passing the store to it.
  */

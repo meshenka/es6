@@ -15,7 +15,7 @@ gulp.task('default',['counter'], () => {
         'src/script.js',
         'src/counter.jsx'])
         .pipe(webpack( webpackConfig ))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('build/'))
     ;
 

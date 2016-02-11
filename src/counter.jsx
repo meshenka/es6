@@ -90,7 +90,7 @@ const store = createStore(counter);
 
 
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
 
 /**
  * Finally, render the container,

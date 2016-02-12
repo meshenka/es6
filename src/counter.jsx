@@ -45,7 +45,7 @@ const mapStateToProps = (state) => {
   return {
     value: state
   };
-}
+};
 
 /*
  * Which injected props should be callbacks

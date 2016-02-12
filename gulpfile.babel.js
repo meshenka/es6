@@ -12,8 +12,8 @@ import webpackConfig from './webpack.config';
 
 gulp.task('default',['counter'], () => {
     return gulp.src([
-        'src/script.js',
-        'src/counter.jsx'])
+        'src/script.js'/*,
+        'src/counter.jsx'*/])
         .pipe(webpack( webpackConfig ))
         .pipe(uglify())
         .pipe(gulp.dest('build/'))

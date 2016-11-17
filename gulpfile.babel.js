@@ -12,8 +12,7 @@ import webpackConfig from './webpack.config';
 
 gulp.task('default', () => {
     return gulp.src('src/script.js')
-        .pipe(webpack( webpackConfig ))
+        .pipe(webpack(webpackConfig))
         .pipe(uglify())
-        .pipe(gulp.dest('build/'))
-    ;
+        .pipe(gulp.dest('build/'));
 });

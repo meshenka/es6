@@ -4,7 +4,7 @@
  */
 const config = {
     output: {
-        // path: './build',
+        //path: './build',
         filename: 'all.js'
     },
     module: {

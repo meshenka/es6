@@ -1,12 +1,20 @@
 'use strict';
+//var webpack = require('webpack');
+import webpack from 'webpack'
 /**
  * ES6 style configuration
  */
-const config = {
+export default {
+    entry: {
+      'main': './src/script.js'
+    },
     output: {
         //path: './build',
         filename: 'all.js'
     },
+    plugins: [
+      new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
+    ],
     module: {
       loaders: [
         {
@@ -19,6 +27,4 @@ const config = {
         }
       ]
     }
-};
-
-export default config;
+}

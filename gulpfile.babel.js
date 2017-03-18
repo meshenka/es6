@@ -8,7 +8,7 @@
 import gulp from 'gulp'
 import webpack from 'webpack-stream'
 import uglify from 'gulp-uglify'
-import webpackConfig from './webpack.config'
+import webpackConfig from './webpack.config.babel'
 
 gulp.task('default', () => {
     return gulp.src('src/script.js')

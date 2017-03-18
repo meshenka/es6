@@ -1,8 +1,7 @@
-export
-default class {
+export default class {
     constructor(var1 = 1, var2 = null) {
-        this.var1 = var1;
-        this.var2 = var2;
+        this.var1 = var1
+        this.var2 = var2
     }
 
     something() {

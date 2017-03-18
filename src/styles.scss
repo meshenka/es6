@@ -1,48 +1,50 @@
-// ---------- = Liens d'évitements ----------
+// ---------- = Liens d évitements ----------
 .skip-link {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 
-    span, ul {
-        display: inline-block;
+  span,
+  ul {
+    display: inline-block;
+  }
+
+  ul {
+    margin: 2px 0;
+    padding-left: 2px;
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      position: relative;
+      padding: 0 2px 0 7px;
+
+      &::before {
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 1px;
+        height: 11px;
+        content: '|';
+      }
     }
 
-    ul {
-        margin: 2px 0;
-        padding-left: 2px;
+    &:first-child a {
+      padding-left: 0;
+
+      &::before {
+        content: '';
+      }
     }
-
-    li {
-        display: inline-block;
-
-        a {
-            position: relative;
-            padding: 0 2px 0 7px;
-
-            &:before {
-                position: absolute;
-                top: -3px;
-                left: 0;
-                width: 1px;
-                height: 11px;
-                content: '|';
-            }
-        }
-
-        &:first-child a {
-            padding-left: 0;
-
-            &:before {
-                content: '';
-            }
-        }
-    }
+  }
 }
+
 .hidden-link {
-    position: absolute;
-    left: -9999px;
+  position: absolute;
+  left: -9999px;
 }
 
 /*
@@ -50,11 +52,10 @@
 = WebKit Safari et Chrome
 -----------------------------------------------------------------------
 */
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    .skip-link li a:before {
-        top: 0;
-    }
+@media screen and (min-resolution: 0dppx) {
+  .skip-link li a::before {
+    top: 0;
+  }
 }
 
 /*
@@ -62,13 +63,12 @@
 = Versions responsive
 -----------------------------------------------------------------------
 */
-
-// affichage des liens d'évitements par défaut sur les versions tactiles
+// affichage des liens d évitements par défaut sur les versions tactiles
 @media (max-width: 990px) {
-    .skip-link.hidden-link {
-        position: static;
-        left: auto;
-    }
+  .skip-link.hidden-link {
+    position: static;
+    left: auto;
+  }
 }
 
 /*
@@ -76,11 +76,10 @@
 = Versions responsive
 -----------------------------------------------------------------------
 */
-
-// affichage des liens d'évitements par défaut sur les versions tactiles
+// affichage des liens d évitements par défaut sur les versions tactiles
 @media (max-width: 990px) {
-    .skip-link.hidden-link {
-        position: static;
-        left: auto;
-    }
+  .skip-link.hidden-link {
+    position: static;
+    left: auto;
+  }
 }

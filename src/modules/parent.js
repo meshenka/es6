@@ -5,6 +5,6 @@ export default class {
     }
 
     something() {
-        return `This is an interpolated string with : ${this.var1} and ${this.var2}`;
+        return `This is an interpolated string with : ${this.var1} and ${this.var2}`
     }
 }

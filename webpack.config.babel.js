@@ -1,7 +1,7 @@
-'use strict';
-
-import webpack from 'webpack'
+import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+
+//process.traceDeprecation = true
 
 /**
  * ES6 style configuration
@@ -12,7 +12,7 @@ export default {
     'styles': './src/styles.scss'
   },
   output : {
-    path: './build',
+    path: path.resolve(__dirname, 'build'),
     filename: '[name].js'
   },
   plugins : [
